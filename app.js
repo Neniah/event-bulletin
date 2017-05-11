@@ -1,13 +1,16 @@
 new Vue({
   el: '#events',
+
   data: {
     event: { name: '', description: '', date: '' },
     events: []
   },
-  ready: function() {
+
+  mounted: function() {
 
     this.fetchEvents();
   },
+
   methods: {
 
     fetchEvents: function(){
@@ -31,7 +34,8 @@ new Vue({
           date: '2018-03-11'
         }
       ];
-      this.$set('events', events);
+
+      this.events = events;
     },
 
     // Adds an event to the existing events array
@@ -44,7 +48,7 @@ new Vue({
 
     deleteEvent: function(index){
       if(confirm("Are you sure you want to delete this event?")){
-        this.event.$remove(index);
+        this.events.splice(index, 1);
       }
     }
   }
