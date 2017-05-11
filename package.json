@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Neniah/event-bulletin#readme",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "vue": "^2.3.3",
+    "vue": "2.3.3",
     "vue-resource": "^1.3.1"
   }
 }
